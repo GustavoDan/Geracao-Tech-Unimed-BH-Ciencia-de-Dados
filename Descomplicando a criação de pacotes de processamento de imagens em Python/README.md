@@ -38,7 +38,7 @@ py -m pip install image_processing
 
 ## Instructions on uploading to PyPI
 
-Open the terminal at the project root folder, then run these commands
+Open the terminal at the project root folder, then run these commands to generate the distribution
 
 ```bash
 pip install --upgrade pip
@@ -47,6 +47,17 @@ pip install twine
 pip install setuptools
 
 python setup.py sdist bdist_wheel
+```
+
+Then, to upload at Test PyPI, run
+
+```bash
+python -m twine upload --repository-url https://test.pypi.org/legacy/ dist/*
+```
+
+And for PyPI, run
+
+```bash
 python -m twine upload --repository-url https://test.pypi.org/legacy/ dist/*
 ```
 
