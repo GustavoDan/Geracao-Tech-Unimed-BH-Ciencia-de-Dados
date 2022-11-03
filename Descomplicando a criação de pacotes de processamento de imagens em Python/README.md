@@ -33,7 +33,7 @@ This package is used to:
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install the package
 
 ```bash
-py -m pip install image_processing
+pip install -i https://test.pypi.org/simple/ image-processing-gd
 ```
 
 ## Instructions on uploading to PyPI
