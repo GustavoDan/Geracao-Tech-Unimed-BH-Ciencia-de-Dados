@@ -36,6 +36,20 @@ Use the package manager [pip](https://pip.pypa.io/en/stable/) to install the pac
 py -m pip install image_processing
 ```
 
+## Instructions on uploading to PyPI
+
+Open the terminal at the project root folder, then run these commands
+
+```bash
+pip install --upgrade pip
+pip install wheel
+pip install twine
+pip install setuptools
+
+python setup.py sdist bdist_wheel
+python -m twine upload --repository-url https://test.pypi.org/legacy/ dist/*
+```
+
 ---
 
 ## License
