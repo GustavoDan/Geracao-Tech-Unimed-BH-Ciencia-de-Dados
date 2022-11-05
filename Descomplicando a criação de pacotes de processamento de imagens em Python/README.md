@@ -38,7 +38,7 @@ pip install -i https://test.pypi.org/simple/ image-processing-gd
 
 ## Instructions on uploading to PyPI
 
-Open the terminal at the project root folder, then run these commands to generate the distribution
+Open the terminal at the project root folder, then run these commands to install dependencies and to generate the distribution
 
 ```bash
 pip install --upgrade pip
