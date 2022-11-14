@@ -1,0 +1,53 @@
+Acessar o S3
+Botão "Create bucket" em Buckets
+Preencher nome do bucket e criá-lo
+Clicar no bucket criado
+Botão "Create folder"
+Criar uma pasta com nome "output"
+E outra com o nome do conjunto de dados, que definirá o nome da tabela no AWS Glue
+Abrir a pasta do conjunto de dados
+Fazer upload do(s) arquivo(s) de dados(no caso "brazil_population_2019.csv")
+
+Acessar o Glue
+Crawlers
+Botão "Add Crawler"
+Source type: Data Stores
+Repeat Crawls: Crawl all folders
+Data store: S3
+Crawl data in: path in my account
+Include path: PASTA criada no bucket com os dados de entrada
+Another data store: No
+Create IAM Role
+Frequency: Run on demand
+Botão "Add database", colocar só o nome e criar db
+Group behavior: Create a single schema for each S3 path
+Criar o crawler
+Selecioná-lo e clicar em "Run crawler"
+Databases/Tables e dar Refresh
+Clicar na(s) tabela(s) para ver o esquema
+
+Acessar o Athena
+Botão "Explore the query editor"
+Botão "View Settings"
+Botão "Manage"
+location of query result: "Browse S3" e selecionar o bucket com os dados
+Selecionar o db e criar queries (exemplos na pasta "sql")
+Verificar as queries executadas e não salvas dentro da pasta "output" do bucket
+Salvar todas as queries(pelo botão "Save as")
+Executar as queries salvas e verificar novamente a pasta "output"
+
+Para gerar o SQL de criação da tabela:
+Clicar mo menu de 3 pontos verticais na tabela desejada
+Generate table DDL
+
+Acessar o QuickSight
+Datasets
+Botão "New dataset"
+Athena
+Colocar o nome do dataset
+Botão "Validate connection" e botão "Create data source"
+Database: Selecionar o db desejado
+Selecionar a tabela desejada
+Directly query your data
+Botão "Edit/Preview data"
+Botão "Save and visualize data"
